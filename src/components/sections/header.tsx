@@ -20,7 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="flex flex-1 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 ml-4">
             <span className="font-bold">Madhav Khurana</span>
           </Link>
           <nav className="hidden md:flex flex-1 items-center justify-center space-x-6 text-sm font-medium">
@@ -44,6 +44,11 @@ export function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right">
+                <div className="p-6 pt-12 text-center">
+                  <Link href="/" className="flex items-center space-x-2">
+                    <span className="font-bold text-lg">Madhav Khurana</span>
+                  </Link>
+                </div>
                 <div className="grid gap-6 p-6">
                   <nav className="grid gap-4">
                     {navLinks.map((link) => (
