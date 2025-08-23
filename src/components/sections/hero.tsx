@@ -10,13 +10,13 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid min-h-[70vh] items-center gap-8 py-12 md:grid-cols-1 md:gap-16 md:py-20">
           <div className="flex flex-col items-center space-y-4 text-center">
-            <Card className="rounded-xl border-2 border-primary/20 bg-secondary/30 p-6 shadow-lg backdrop-blur-sm">
+            <Card className="rounded-xl border-2 border-primary/20 bg-card p-6 shadow-lg backdrop-blur-sm">
               <CardContent className="flex flex-col gap-4 p-0">
                 <div>
                   <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
                     Hi, I'm Madhav Khurana
                   </h1>
-                  <p className="text-xl text-primary">
+                  <p className="text-xl text-primary-foreground/80">
                     Software Engineer & Web Developer
                   </p>
                 </div>
