@@ -8,8 +8,8 @@ export function Hero() {
   return (
     <section id="hero" className="w-full border-b">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid min-h-[70vh] items-center gap-8 py-12 md:grid-cols-2 md:gap-16 md:py-20">
-          <div className="order-2 flex flex-col items-start space-y-4 md:order-1">
+        <div className="grid min-h-[70vh] items-center gap-8 py-12 md:grid-cols-1 md:gap-16 md:py-20">
+          <div className="flex flex-col items-center space-y-4 text-center">
             <Card className="rounded-xl border-2 border-primary/20 bg-secondary/30 p-6 shadow-lg backdrop-blur-sm">
               <CardContent className="flex flex-col gap-4 p-0">
                 <div>
@@ -20,10 +20,10 @@ export function Hero() {
                     Software Engineer & Web Developer
                   </p>
                 </div>
-                <p className="max-w-lg text-foreground/80">
+                <p className="mx-auto max-w-lg text-foreground/80">
                   I specialize in crafting beautiful, functional, and performant web experiences, turning complex problems into elegant solutions.
                 </p>
-                <div className="flex flex-wrap items-center gap-4 pt-4">
+                <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
                   <Button asChild size="lg">
                     <Link href="#contact">Contact Me</Link>
                   </Button>
@@ -47,17 +47,6 @@ export function Hero() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-          <div className="order-1 flex justify-center md:order-2">
-            <Image
-              src="https://placehold.co/400x400.png"
-              width={400}
-              height={400}
-              alt="Madhav Khurana"
-              className="rounded-full object-cover shadow-2xl"
-              data-ai-hint="professional headshot"
-              priority
-            />
           </div>
         </div>
       </div>
