@@ -10,22 +10,24 @@ export function Contact() {
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
           I'm currently open to new opportunities. Feel free to reach out via email or connect with me on social media.
         </p>
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Button asChild variant="default" size="lg">
             <Link href="mailto:madhav.khurana@example.com">
               Email Me
             </Link>
           </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="https://github.com" target="_blank" aria-label="GitHub">
-              <Github className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
-            </Link>
-          </Button>
-          <Button variant="ghost" size="icon" asChild>
-            <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-              <Linkedin className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
-            </Link>
-          </Button>
+          <div className="flex gap-4">
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://github.com" target="_blank" aria-label="GitHub">
+                <Github className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                <Linkedin className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
+              </Link>
+            </Button>
+          </div>
         </div>
         <div className="mt-12 text-sm text-muted-foreground">
           © {new Date().getFullYear()} Madhav Khurana. All Rights Reserved.

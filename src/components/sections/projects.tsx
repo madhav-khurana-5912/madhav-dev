@@ -51,7 +51,7 @@ export function Projects() {
           Here are some of the projects I've worked on.
         </p>
       </div>
-      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <Card key={project.title} className="flex flex-col overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
             <div className="relative h-48 w-full">

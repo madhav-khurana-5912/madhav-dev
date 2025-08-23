@@ -36,7 +36,7 @@ export function Skills() {
         </p>
       </div>
 
-      <div className="mt-12 grid gap-8 md:grid-cols-3">
+      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {skillCategories.map((category) => (
           <div key={category.title} className="rounded-lg border bg-card p-6 shadow-sm">
             <div className="flex items-center gap-4">
