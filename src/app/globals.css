@@ -39,7 +39,7 @@
     --secondary-foreground: 0 0% 100%;
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 60%;
-    --accent: 0 0% 90%; /* Light Gray for accent */
+    --accent: 175 41% 63%; /* Teal */
     --accent-foreground: 0 0% 0%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
@@ -55,8 +55,24 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Fira Code', monospace;
   }
   html {
     scroll-behavior: smooth;
+  }
+  .font-headline {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+@layer utilities {
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+
+  .scroller {
+    animation: scroll 40s linear infinite;
   }
 }

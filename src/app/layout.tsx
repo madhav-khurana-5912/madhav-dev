@@ -1,9 +1,9 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-import { Inter } from 'next/font/google';
+import { Fira_Code } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] });
+const firaCode = Fira_Code({ subsets: ['latin'], weight: ['400', '700'] });
 
 export const metadata: Metadata = {
   title: 'Profile Canvas',
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${firaCode.className} antialiased`}>
         {children}
         <Toaster />
       </body>

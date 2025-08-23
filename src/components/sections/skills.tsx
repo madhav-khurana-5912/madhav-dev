@@ -1,54 +1,44 @@
 import { Badge } from "@/components/ui/badge";
-import { Server, Settings, Palette } from 'lucide-react';
-import type { LucideIcon } from "lucide-react";
 
-type SkillCategory = {
-  title: string;
-  icon: LucideIcon;
-  skills: string[];
-};
-
-const skillCategories: SkillCategory[] = [
-  {
-    title: "Frontend",
-    icon: Palette,
-    skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Figma"],
-  },
-  {
-    title: "Backend",
-    icon: Server,
-    skills: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB", "Firebase"],
-  },
-  {
-    title: "Tools & DevOps",
-    icon: Settings,
-    skills: ["Git", "GitHub", "Docker", "Vercel", "Google Cloud", "CI/CD"],
-  },
+const skills = [
+  "HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Figma",
+  "Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB", "Firebase",
+  "Git", "GitHub", "Docker", "Vercel", "Google Cloud", "CI/CD"
 ];
 
-export function Skills() {
-  return (
-    <section id="skills" className="py-12 md:py-20">
-      <div className="text-left">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">What I Work With</h2>
-      </div>
+// Duplicate skills to create a seamless loop
+const duplicatedSkills = [...skills, ...skills];
 
-      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {skillCategories.map((category) => (
-          <div key={category.title} className="rounded-lg border bg-card p-6 shadow-sm">
-            <div className="flex items-center gap-4">
-              <category.icon className="h-8 w-8 text-primary" />
-              <h3 className="text-2xl font-semibold">{category.title}</h3>
+export function Skills() {
+  const half = Math.ceil(duplicatedSkills.length / 2);
+  const firstRow = duplicatedSkills.slice(0, half);
+  const secondRow = duplicatedSkills.slice(half);
+
+  return (
+    <section id="skills" className="py-12 md:py-20 w-full overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-left mb-12">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">What I Work With</h2>
+        </div>
+      </div>
+      
+      <div className="relative">
+        <div className="flex flex-col gap-4">
+            <div className="flex scroller space-x-4">
+                {firstRow.map((skill, index) => (
+                    <Badge key={`first-${index}-${skill}`} variant="secondary" className="px-6 py-2 text-lg whitespace-nowrap">
+                    {skill}
+                    </Badge>
+                ))}
             </div>
-            <div className="mt-6 flex flex-wrap gap-2">
-              {category.skills.map((skill) => (
-                <Badge key={skill} variant="secondary" className="px-3 py-1 text-sm">
-                  {skill}
-                </Badge>
-              ))}
+            <div className="flex scroller space-x-4" style={{ animationDirection: 'reverse' }}>
+                {secondRow.map((skill, index) => (
+                    <Badge key={`second-${index}-${skill}`} variant="secondary" className="px-6 py-2 text-lg whitespace-nowrap">
+                    {skill}
+                    </Badge>
+                ))}
             </div>
-          </div>
-        ))}
+        </div>
       </div>
     </section>
   );
