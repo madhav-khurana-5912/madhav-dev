@@ -13,7 +13,6 @@ export function Contact() {
         <div className="mt-8 flex justify-center gap-4">
           <Button asChild variant="default" size="lg">
             <Link href="mailto:madhav.khurana@example.com">
-              <Mail className="mr-2 h-5 w-5" />
               Email Me
             </Link>
           </Button>

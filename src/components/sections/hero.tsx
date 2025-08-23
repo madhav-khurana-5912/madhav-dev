@@ -9,7 +9,7 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid min-h-[70vh] items-center gap-8 py-12 md:grid-cols-2 md:gap-16 md:py-20">
           <div className="order-2 flex flex-col items-start space-y-4 md:order-1">
-            <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
               Hi, I'm Madhav Khurana
             </h1>
             <p className="text-xl text-primary">

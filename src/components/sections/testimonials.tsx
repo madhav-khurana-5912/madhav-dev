@@ -11,21 +11,21 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Working with John has been an absolute pleasure. His technical expertise and commitment to quality are second to none. He delivered a product that exceeded all our expectations.",
+    quote: "Working with Madhav has been an absolute pleasure. His technical expertise and commitment to quality are second to none. He delivered a product that exceeded all our expectations.",
     author: "Jane Smith",
     title: "CEO, TechCorp",
     avatar: "https://placehold.co/100x100.png",
     avatarHint: "woman headshot"
   },
   {
-    quote: "John is a highly skilled developer with a keen eye for detail. His ability to translate complex designs into pixel-perfect, responsive code is truly impressive.",
+    quote: "Madhav is a highly skilled developer with a keen eye for detail. His ability to translate complex designs into pixel-perfect, responsive code is truly impressive.",
     author: "Sam Wilson",
     title: "Lead Designer, Innovate Co.",
     avatar: "https://placehold.co/100x100.png",
     avatarHint: "man headshot"
   },
   {
-    quote: "The final product was delivered on time and was of exceptional quality. John's communication throughout the project was excellent, keeping us informed every step of the way.",
+    quote: "The final product was delivered on time and was of exceptional quality. Madhav's communication throughout the project was excellent, keeping us informed every step of the way.",
     author: "Emily White",
     title: "Product Manager, Solutions Inc.",
     avatar: "https://placehold.co/100x100.png",
@@ -37,7 +37,7 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="py-12 md:py-20">
       <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">What Others Say</h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">What Others Say</h2>
         <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
           Testimonials from colleagues and clients I've worked with.
         </p>
