@@ -16,7 +16,7 @@ export function Hero() {
               Software Engineer & Web Developer
             </p>
             <p className="max-w-lg text-foreground/80">
-              I specialize in crafting beautiful and functional web experiences. My goal is to build products that are not only performant but also provide a great user experience, turning complex problems into elegant solutions.
+              I specialize in crafting beautiful, functional, and performant web experiences, turning complex problems into elegant solutions.
             </p>
             <div className="flex flex-wrap items-center gap-4 pt-4">
               <Button asChild size="lg">
