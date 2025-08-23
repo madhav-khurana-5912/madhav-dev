@@ -10,7 +10,7 @@ export function Hero() {
         <div className="grid min-h-[70vh] items-center gap-8 py-12 md:grid-cols-2 md:gap-16 md:py-20">
           <div className="order-2 flex flex-col items-start space-y-4 md:order-1">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-              Hi, I'm John Doe
+              Hi, I'm Madhav Khurana
             </h1>
             <p className="text-xl text-primary">
               Software Engineer & Web Developer
@@ -46,7 +46,7 @@ export function Hero() {
               src="https://placehold.co/400x400.png"
               width={400}
               height={400}
-              alt="John Doe"
+              alt="Madhav Khurana"
               className="rounded-full object-cover shadow-2xl"
               data-ai-hint="professional headshot"
               priority

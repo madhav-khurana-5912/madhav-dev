@@ -12,7 +12,7 @@ export function Contact() {
         </p>
         <div className="mt-8 flex justify-center gap-4">
           <Button asChild variant="default" size="lg">
-            <Link href="mailto:john.doe@example.com">
+            <Link href="mailto:madhav.khurana@example.com">
               <Mail className="mr-2 h-5 w-5" />
               Email Me
             </Link>
@@ -29,7 +29,7 @@ export function Contact() {
           </Button>
         </div>
         <div className="mt-12 text-sm text-muted-foreground">
-          © {new Date().getFullYear()} John Doe. All Rights Reserved.
+          © {new Date().getFullYear()} Madhav Khurana. All Rights Reserved.
         </div>
       </div>
     </footer>
