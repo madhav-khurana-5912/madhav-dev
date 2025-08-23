@@ -23,17 +23,17 @@ export function Skills() {
       </div>
       
       <div className="relative">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
             <div className="flex scroller space-x-4">
                 {firstRow.map((skill, index) => (
-                    <Badge key={`first-${index}-${skill}`} variant="secondary" className="px-6 py-2 text-lg whitespace-nowrap">
+                    <Badge key={`first-${index}-${skill}`} variant="secondary" className="px-4 py-1 text-lg whitespace-nowrap">
                     {skill}
                     </Badge>
                 ))}
             </div>
             <div className="flex scroller space-x-4" style={{ animationDirection: 'reverse' }}>
                 {secondRow.map((skill, index) => (
-                    <Badge key={`second-${index}-${skill}`} variant="secondary" className="px-6 py-2 text-lg whitespace-nowrap">
+                    <Badge key={`second-${index}-${skill}`} variant="secondary" className="px-4 py-1 text-lg whitespace-nowrap">
                     {skill}
                     </Badge>
                 ))}
