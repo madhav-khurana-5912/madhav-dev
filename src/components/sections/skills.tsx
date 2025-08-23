@@ -30,10 +30,7 @@ export function Skills() {
   return (
     <section id="skills" className="py-12 md:py-20">
       <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">My Skills</h2>
-        <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-          A collection of technologies and tools I'm proficient with.
-        </p>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">What I Work With</h2>
       </div>
 
       <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
