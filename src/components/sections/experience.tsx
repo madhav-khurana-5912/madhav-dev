@@ -5,19 +5,19 @@ const experiences = [
     company: "Acme Corporation",
     title: "Senior Software Engineer",
     period: "2021 - Present",
-    description: "Led development of a new client-facing web application using Next.js and TypeScript, resulting in a 30% increase in user engagement. Mentored junior developers and conducted code reviews to maintain high code quality.",
+    description: "Error 404: Job description not found. My accomplishments were so vast, they broke the character limit. I can only say I was a code-slinging, bug-vanquishing hero. Please give me the job.",
   },
   {
     company: "Innovate Inc.",
     title: "Software Engineer",
     period: "2019 - 2021",
-    description: "Developed and maintained features for a large-scale e-commerce platform using React and Redux. Collaborated with designers and product managers to create a seamless user experience.",
+    description: "Error 404: My achievements at this company are currently unavailable as they are being transcribed into an epic poem. It was legendary. Please give me the job.",
   },
   {
     company: "Tech Solutions LLC",
     title: "Junior Developer",
     period: "2017 - 2019",
-    description: "Assisted in the development of various web applications, gaining experience with HTML, CSS, and JavaScript. Contributed to bug fixing and feature implementation in a fast-paced agile environment.",
+    description: "Error 404: The description of my meteoric rise from a junior developer to a coding prodigy has been redacted for national security reasons. It was impressive. Please give me the job.",
   },
 ];
 
