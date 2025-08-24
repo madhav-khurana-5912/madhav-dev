@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 
 export function Contact() {
   return (
@@ -18,13 +18,18 @@ export function Contact() {
           </Button>
           <div className="flex gap-4">
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://github.com" target="_blank" aria-label="GitHub">
+              <Link href="https://github.com/madhahubby" target="_blank" aria-label="GitHub">
                 <Github className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
-              <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/in/madhav-khurana-site" target="_blank" aria-label="LinkedIn">
                 <Linkedin className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <Link href="https://www.instagram.com/madhav_5912?igsh=ZHI1ajU0aDd5bTIz" target="_blank" aria-label="Instagram">
+                <Instagram className="h-7 w-7 text-muted-foreground transition-colors hover:text-primary" />
               </Link>
             </Button>
           </div>

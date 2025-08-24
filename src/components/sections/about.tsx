@@ -35,12 +35,12 @@ export function About() {
                     </Link>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
-                  <Link href="https://github.com" target="_blank" aria-label="GitHub">
+                  <Link href="https://github.com/madhahubby" target="_blank" aria-label="GitHub">
                     <Github className="h-6 w-6" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
-                  <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+                  <Link href="https://www.linkedin.com/in/madhav-khurana-site" target="_blank" aria-label="LinkedIn">
                     <Linkedin className="h-6 w-6" />
                   </Link>
                 </Button>
