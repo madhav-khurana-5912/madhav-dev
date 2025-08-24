@@ -61,7 +61,7 @@ export function Projects() {
         {projects.map((project) => (
           <article key={project.title} className="group relative">
             <div className="absolute -inset-y-4 -inset-x-6 z-0 scale-95 bg-card/10 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:rounded-2xl"></div>
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 items-start">
+            <div className="relative z-10 grid grid-cols-1 gap-6 items-start">
               <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-border shadow-md">
                 <Image
                   src={project.image}
