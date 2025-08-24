@@ -30,7 +30,7 @@ export function About() {
             </div>
              <div className="flex items-center gap-4 pt-4">
                 <Button asChild>
-                    <Link href="/#contact">
+                    <Link href="https://wa.link/yc8d0o" target="_blank" rel="noopener noreferrer">
                         Get In Touch
                     </Link>
                 </Button>
