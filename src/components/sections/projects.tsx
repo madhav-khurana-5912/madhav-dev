@@ -16,7 +16,7 @@ const projects = [
   {
     title: "E-commerce Platform",
     description: "A full-featured e-commerce site with product listings, a shopping cart, and a secure checkout process. Built with Next.js and Stripe for payments.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/400x225.png",
     imageHint: "online store",
     tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
     liveUrl: "#",
@@ -27,7 +27,7 @@ const projects = [
   {
     title: "Project Management Tool",
     description: "A collaborative tool for teams to manage tasks, track progress, and communicate effectively. Features real-time updates with Firebase.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/400x225.png",
     imageHint: "dashboard analytics",
     tags: ["React", "Firebase", "Redux", "Material-UI"],
     liveUrl: "#",
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Personal Blog",
     description: "A minimalist blog platform with a CMS for writing and publishing articles. Optimized for performance and SEO, with full-text search capabilities.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/400x225.png",
     imageHint: "minimalist blog",
     tags: ["Next.js", "MDX", "Contentlayer", "Vercel"],
     liveUrl: "#",
@@ -61,8 +61,8 @@ export function Projects() {
         {projects.map((project) => (
           <article key={project.title} className="group relative">
             <div className="absolute -inset-y-4 -inset-x-6 z-0 scale-95 bg-card/10 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:rounded-2xl"></div>
-            <div className="relative z-10 grid grid-cols-1 gap-6 items-start">
-              <div className="relative aspect-[16/9] overflow-hidden rounded-lg border border-border shadow-md">
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+              <div className="relative aspect-video overflow-hidden rounded-lg border border-border shadow-md">
                 <Image
                   src={project.image}
                   alt={project.title}
