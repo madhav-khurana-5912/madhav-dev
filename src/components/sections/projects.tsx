@@ -48,7 +48,7 @@ export function Projects() {
           Here are some of the projects I've worked on.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 gap-8">
         {projects.map((project) => (
           <article key={project.title} className="group relative flex flex-col gap-4 rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
             <div className="relative aspect-video">
