@@ -7,7 +7,7 @@ const projects = [
   {
     title: "E-commerce Platform",
     description: "A full-featured e-commerce site with product listings, a shopping cart, and a secure checkout process. Built with Next.js and Stripe for payments.",
-    image: "https://placehold.co/400x225.png",
+    image: "https://placehold.co/600x400.png",
     imageHint: "online store",
     tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
     liveUrl: "#",
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Project Management Tool",
     description: "A collaborative tool for teams to manage tasks, track progress, and communicate effectively. Features real-time updates with Firebase.",
-    image: "https://placehold.co/400x225.png",
+    image: "https://placehold.co/600x400.png",
     imageHint: "dashboard analytics",
     tags: ["React", "Firebase", "Redux", "Material-UI"],
     liveUrl: "#",
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "Personal Blog",
     description: "A minimalist blog platform with a CMS for writing and publishing articles. Optimized for performance and SEO, with full-text search capabilities.",
-    image: "https://placehold.co/400x225.png",
+    image: "https://placehold.co/600x400.png",
     imageHint: "minimalist blog",
     tags: ["Next.js", "MDX", "Contentlayer", "Vercel"],
     liveUrl: "#",
@@ -48,10 +48,10 @@ export function Projects() {
           Here are some of the projects I've worked on.
         </p>
       </div>
-      <div className="flex flex-col gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <article key={project.title} className="group relative flex flex-col md:flex-row gap-8 rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
-            <div className="relative md:w-1/3 aspect-video md:aspect-auto">
+          <article key={project.title} className="group relative flex flex-col gap-4 rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+            <div className="relative aspect-video">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -60,7 +60,7 @@ export function Projects() {
                 data-ai-hint={project.imageHint}
               />
             </div>
-            <div className="flex flex-col flex-grow p-6 md:w-2/3">
+            <div className="flex flex-col flex-grow p-6 pt-0">
               <h3 className="text-xl font-semibold text-primary">{project.title}</h3>
               <p className="mt-2 text-muted-foreground flex-grow">{project.description}</p>
               <div className="mt-4 flex flex-wrap gap-2">
