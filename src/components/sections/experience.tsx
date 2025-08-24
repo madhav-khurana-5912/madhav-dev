@@ -33,14 +33,14 @@ export function Experience() {
       <div className="text-left mb-12">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">My Experience</h2>
       </div>
-      <div className="relative">
+      <div className="relative pl-6">
         {/* Vertical line */}
-        <div className="absolute left-6 top-0 h-full w-0.5 bg-border -z-10"></div>
+        <div className="absolute left-6 top-0 h-full w-0.5 bg-border -z-10 translate-x-[-50%]"></div>
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-12">
+            <div key={index} className="relative">
               {/* Dot on the timeline */}
-              <div className="absolute left-[20px] top-1 h-3 w-3 rounded-full bg-primary border-2 border-background"></div>
+              <div className="absolute -left-3 top-1 h-3 w-3 rounded-full bg-primary border-2 border-background"></div>
               <Card>
                 <CardHeader>
                   <div className="flex justify-between items-start">
