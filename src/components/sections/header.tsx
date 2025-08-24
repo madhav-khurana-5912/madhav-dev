@@ -7,14 +7,27 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { useState } from "react";
 
 const navLinks = [
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "/about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#testimonials", label: "Testimonials" },
 ];
 
 export function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
+
+  const handleLinkClick = (href: string) => {
+    if (href.startsWith('/#')) {
+      const targetId = href.substring(2);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setSheetOpen(false);
+  };
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -29,6 +42,12 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className="transition-colors hover:text-primary"
+                onClick={(e) => {
+                  if (link.href.startsWith('/#')) {
+                    e.preventDefault();
+                    handleLinkClick(link.href);
+                  }
+                }}
               >
                 {link.label}
               </Link>
@@ -46,7 +65,7 @@ export function Header() {
               <SheetContent side="right">
                 <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
                 <div className="p-6 pt-12 text-center">
-                  <Link href="/" className="flex items-center space-x-2">
+                  <Link href="/" className="flex items-center space-x-2" onClick={() => setSheetOpen(false)}>
                     <span className="font-bold text-lg">Madhav Khurana</span>
                   </Link>
                 </div>
@@ -57,7 +76,12 @@ export function Header() {
                         key={link.href}
                         href={link.href}
                         className="text-lg font-medium transition-colors hover:text-primary"
-                        onClick={() => setSheetOpen(false)}
+                        onClick={(e) => {
+                           if (link.href.startsWith('/#')) {
+                            e.preventDefault();
+                          }
+                          handleLinkClick(link.href);
+                        }}
                       >
                         {link.label}
                       </Link>
