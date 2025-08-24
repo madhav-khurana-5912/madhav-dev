@@ -5,19 +5,19 @@ const experiences = [
     company: "Acme Corporation",
     title: "Senior Software Engineer",
     period: "2021 - Present",
-    description: "Error 404: Job description not found. My accomplishments were so vast, they broke the character limit. I can only say I was a code-slinging, bug-vanquishing hero. Please give me the job.",
+    description: "Error 404: Job description not found. My accomplishments are so vast, they break the character limit. I can only say I am a code-slinging, bug-vanquishing hero. Please give me the job.",
   },
   {
     company: "Innovate Inc.",
     title: "Software Engineer",
     period: "2019 - 2021",
-    description: "Error 404: My achievements at this company are currently unavailable as they are being transcribed into an epic poem. It was legendary. Please give me the job.",
+    description: "Error 404: My achievements at this company are currently unavailable as they are being transcribed into an epic poem. It is legendary. Please give me the job.",
   },
   {
     company: "Tech Solutions LLC",
     title: "Junior Developer",
     period: "2017 - 2019",
-    description: "Error 404: The description of my meteoric rise from a junior developer to a coding prodigy has been redacted for national security reasons. It was impressive. Please give me the job.",
+    description: "Error 404: The description of my meteoric rise from a junior developer to a coding prodigy has been redacted for national security reasons. It is impressive. Please give me the job.",
   },
 ];
 
