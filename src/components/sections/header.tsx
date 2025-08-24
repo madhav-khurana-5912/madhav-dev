@@ -5,26 +5,21 @@ import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+import { usePathname } from 'next/navigation'
 
 const navLinks = [
   { href: "/about", label: "About" },
-  { href: "/#skills", label: "Skills" },
-  { href: "/#experience", label: "Experience" },
-  { href: "/#projects", label: "Projects" },
-  { href: "/#testimonials", label: "Testimonials" },
+  { href: "/skills", label: "Skills" },
+  { href: "/experience", label: "Experience" },
+  { href: "/projects", label: "Projects" },
+  { href: "/testimonials", label: "Testimonials" },
 ];
 
 export function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
+  const pathname = usePathname();
 
-  const handleLinkClick = (href: string) => {
-    if (href.startsWith('/#')) {
-      const targetId = href.substring(2);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+  const handleLinkClick = () => {
     setSheetOpen(false);
   };
 
@@ -41,13 +36,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="transition-colors hover:text-primary"
-                onClick={(e) => {
-                  if (link.href.startsWith('/#')) {
-                    e.preventDefault();
-                    handleLinkClick(link.href);
-                  }
-                }}
+                className={`transition-colors hover:text-primary ${pathname === link.href ? 'text-primary' : ''}`}
               >
                 {link.label}
               </Link>
@@ -75,13 +64,8 @@ export function Header() {
                       <Link
                         key={link.href}
                         href={link.href}
-                        className="text-lg font-medium transition-colors hover:text-primary"
-                        onClick={(e) => {
-                           if (link.href.startsWith('/#')) {
-                            e.preventDefault();
-                          }
-                          handleLinkClick(link.href);
-                        }}
+                        className={`text-lg font-medium transition-colors hover:text-primary ${pathname === link.href ? 'text-primary' : ''}`}
+                        onClick={handleLinkClick}
                       >
                         {link.label}
                       </Link>
