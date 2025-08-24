@@ -4,6 +4,7 @@ import { Skills } from "@/components/sections/skills";
 import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Testimonials } from "@/components/sections/testimonials";
+import { AddTestimonialForm } from "@/components/sections/add-testimonial-form";
 import { Contact } from "@/components/sections/contact";
 import { Separator } from "@/components/ui/separator";
 
@@ -22,6 +23,7 @@ export default function Home() {
           <Separator className="my-16 bg-border/20" />
           <Testimonials />
         </div>
+        <AddTestimonialForm />
       </main>
       <Contact />
     </div>
