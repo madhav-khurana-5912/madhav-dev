@@ -9,7 +9,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyD_A_CrcnhKa8KEOxJUXd5X65wXLRN3Yg4",
   authDomain: "portfolio-ka-db.firebaseapp.com",
   projectId: "portfolio-ka-db",
-  storageBucket: "portfolio-ka-db.appspot.com",
+  storageBucket: "portfolio-ka-db.firebasestorage.app",
   messagingSenderId: "494925794271",
   appId: "1:494925794271:web:b269c8a85986c9a36dd26a"
 };
