@@ -1,14 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, GitFork, Star } from "lucide-react";
 
@@ -57,42 +48,39 @@ export function Projects() {
           Here are some of the projects I've worked on.
         </p>
       </div>
-      <div className="space-y-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => (
-          <article key={project.title} className="group relative">
-            <div className="absolute -inset-y-4 -inset-x-6 z-0 scale-95 bg-card/10 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 sm:rounded-2xl"></div>
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-              <div className="relative aspect-video overflow-hidden rounded-lg border border-border shadow-md">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover"
-                  data-ai-hint={project.imageHint}
-                />
+          <article key={project.title} className="group relative flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+            <div className="relative aspect-video">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                data-ai-hint={project.imageHint}
+              />
+            </div>
+            <div className="flex flex-col flex-grow p-6">
+              <h3 className="text-xl font-semibold text-primary">{project.title}</h3>
+              <p className="mt-2 text-muted-foreground flex-grow">{project.description}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <Badge key={tag} variant="secondary">{tag}</Badge>
+                ))}
               </div>
-              <div className="flex flex-col h-full">
-                <h3 className="text-xl font-semibold text-primary">{project.title}</h3>
-                <p className="mt-2 text-muted-foreground flex-grow">{project.description}</p>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">{tag}</Badge>
-                  ))}
-                </div>
-                <div className="mt-4 flex items-center gap-6 text-sm text-muted-foreground">
-                  <Link href={project.liveUrl} className="flex items-center gap-1 hover:text-primary transition-colors" target="_blank">
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </Link>
-                  <Link href={project.repoUrl} className="flex items-center gap-1 hover:text-primary transition-colors" target="_blank">
-                    <Star className="w-4 h-4" />
-                    {project.stars}
-                  </Link>
-                  <Link href={project.repoUrl} className="flex items-center gap-1 hover:text-primary transition-colors" target="_blank">
-                    <GitFork className="w-4 h-4" />
-                    {project.forks}
-                  </Link>
-                </div>
+              <div className="mt-4 flex items-center gap-6 text-sm text-muted-foreground pt-4 border-t border-border/20">
+                <Link href={project.liveUrl} className="flex items-center gap-1 hover:text-primary transition-colors" target="_blank">
+                  <ExternalLink className="w-4 h-4" />
+                  Live
+                </Link>
+                <Link href={project.repoUrl} className="flex items-center gap-1 hover:text-primary transition-colors" target="_blank">
+                  <Star className="w-4 h-4" />
+                  {project.stars}
+                </Link>
+                <Link href={project.repoUrl} className="flex items-center gap-1 hover:text-primary transition-colors" target="_blank">
+                  <GitFork className="w-4 h-4" />
+                  {project.forks}
+                </Link>
               </div>
             </div>
           </article>
