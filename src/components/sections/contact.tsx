@@ -12,7 +12,7 @@ export function Contact() {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
           <Button asChild variant="default" size="lg">
-            <Link href="mailto:madhav.khurana@example.com">
+            <Link href="mailto:madhavkhurana0509@gmail.com">
               Email Me
             </Link>
           </Button>
