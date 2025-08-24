@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -16,7 +17,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { addTestimonial, getTestimonials } from "@/services/testimonials";
+import { addTestimonial } from "@/app/actions";
+import { getTestimonials } from "@/services/testimonials";
 import type { Testimonial } from "@/types";
 import {
   Carousel,
@@ -60,15 +62,6 @@ export function Testimonials() {
 
   useEffect(() => {
     fetchTestimonials();
-    
-    const handleTestimonialAdded = () => {
-      fetchTestimonials();
-    };
-
-    window.addEventListener('testimonialAdded', handleTestimonialAdded);
-    return () => {
-      window.removeEventListener('testimonialAdded', handleTestimonialAdded);
-    };
   }, []);
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -87,7 +80,7 @@ export function Testimonials() {
           description: "Your testimonial has been submitted.",
         });
         form.reset();
-        window.dispatchEvent(new Event('testimonialAdded'));
+        fetchTestimonials(); // Refetch testimonials
       } else {
         throw new Error(result.error || "An unknown error occurred.");
       }
