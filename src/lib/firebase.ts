@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyD_A_CrcnhKa8KEOxJUXd5X65wXLRN3Yg4",
+  authDomain: "portfolio-ka-db.firebaseapp.com",
+  projectId: "portfolio-ka-db",
+  storageBucket: "portfolio-ka-db.appspot.com",
+  messagingSenderId: "494925794271",
+  appId: "1:494925794271:web:b269c8a85986c9a36dd26a"
 };
 
 // Initialize Firebase
