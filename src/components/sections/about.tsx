@@ -48,12 +48,11 @@ export function About() {
           </div>
           <div className="flex items-center justify-center">
             <Image
-                src="https://placehold.co/500x500.png"
+                src="/profile.jpg"
                 width={500}
                 height={500}
                 alt="About Me"
                 className="rounded-full object-cover"
-                data-ai-hint="professional portrait"
             />
           </div>
         </div>
