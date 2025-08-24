@@ -48,10 +48,10 @@ export function Projects() {
           Here are some of the projects I've worked on.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="flex flex-col gap-12">
         {projects.map((project) => (
-          <article key={project.title} className="group relative flex flex-col rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
-            <div className="relative aspect-video">
+          <article key={project.title} className="group relative flex flex-col md:flex-row gap-8 rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
+            <div className="relative md:w-1/3 aspect-video md:aspect-auto">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -60,7 +60,7 @@ export function Projects() {
                 data-ai-hint={project.imageHint}
               />
             </div>
-            <div className="flex flex-col flex-grow p-6">
+            <div className="flex flex-col flex-grow p-6 md:w-2/3">
               <h3 className="text-xl font-semibold text-primary">{project.title}</h3>
               <p className="mt-2 text-muted-foreground flex-grow">{project.description}</p>
               <div className="mt-4 flex flex-wrap gap-2">
