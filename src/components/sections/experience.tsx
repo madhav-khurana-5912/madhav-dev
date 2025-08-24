@@ -1,10 +1,4 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
@@ -33,31 +27,22 @@ export function Experience() {
       <div className="text-left mb-12">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">My Experience</h2>
       </div>
-      <div className="relative pl-6">
-        {/* Vertical line */}
-        <div className="absolute left-6 top-0 h-full w-0.5 bg-border -z-10 translate-x-[-50%]"></div>
-        <div className="space-y-12">
-          {experiences.map((exp, index) => (
-            <div key={index} className="relative">
-              {/* Dot on the timeline */}
-              <div className="absolute -left-3 top-1 h-3 w-3 rounded-full bg-primary border-2 border-background"></div>
-              <Card>
-                <CardHeader>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <CardTitle>{exp.title}</CardTitle>
-                      <CardDescription className="mt-1">{exp.company}</CardDescription>
-                    </div>
-                    <div className="text-sm text-muted-foreground whitespace-nowrap">{exp.period}</div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{exp.description}</p>
-                </CardContent>
-              </Card>
+      <div className="space-y-12">
+        {experiences.map((exp, index) => (
+          <div key={index} className="grid grid-cols-[auto_1fr] gap-x-4">
+            <div className="pt-1">
+              <Briefcase className="w-5 h-5 text-primary" />
             </div>
-          ))}
-        </div>
+            <div>
+              <div className="flex items-baseline gap-2">
+                <h3 className="font-semibold">{exp.title}</h3>
+                <span className="text-primary font-medium">@ {exp.company}</span>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">{exp.period}</p>
+              <p className="text-muted-foreground mt-4">{exp.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
