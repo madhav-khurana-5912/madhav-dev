@@ -7,7 +7,7 @@ const projects = [
   {
     title: "E-commerce Platform",
     description: "A full-featured e-commerce site with product listings, a shopping cart, and a secure checkout process. Built with Next.js and Stripe for payments.",
-    image: "https://placehold.co/600x400.png",
+    image: "/schoolerpa.PNG",
     imageHint: "online store",
     tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind CSS"],
     liveUrl: "#",
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Project Management Tool",
     description: "A collaborative tool for teams to manage tasks, track progress, and communicate effectively. Features real-time updates with Firebase.",
-    image: "https://placehold.co/600x400.png",
+    image: "/fitgenius.PNG",
     imageHint: "dashboard analytics",
     tags: ["React", "Firebase", "Redux", "Material-UI"],
     liveUrl: "#",
@@ -29,7 +29,7 @@ const projects = [
   {
     title: "Personal Blog",
     description: "A minimalist blog platform with a CMS for writing and publishing articles. Optimized for performance and SEO, with full-text search capabilities.",
-    image: "https://placehold.co/600x400.png",
+    image: "/cusinecompass.PNG",
     imageHint: "minimalist blog",
     tags: ["Next.js", "MDX", "Contentlayer", "Vercel"],
     liveUrl: "#",
